@@ -329,26 +329,12 @@
 
       
         
-          
-            <p>注：我使用的是zsh，bash配置内容相同，配置文件为.bash_profile</p>
-<h2 id="JAVA-HOME"><a href="#JAVA-HOME" class="headerlink" title="JAVA_HOME"></a>JAVA_HOME</h2><ul>
-<li><p>配置环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 使用vim打开.zshrc文件，加入java环境变量</span><br><span class="line">$ vim .zshrc</span><br><span class="line">export JAVA_HOME=$(/usr/libexec/java_home)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ source .zshrc</span><br><span class="line">$ echo $JAVA_HOME</span><br><span class="line">$ java -version</span><br><span class="line">java version &quot;1.8.0_73&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_73-b02)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.73-b02, mixed mode)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="ANDROID-HOME"><a href="#ANDROID-HOME" class="headerlink" title="ANDROID_HOME"></a>ANDROID_HOME</h2><ul>
-<li><p>配置环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim .zshrc</span><br><span class="line">export ANDROID_HOME=/Applications/ADT/sdk</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ source .zshrc</span><br><span class="line">$ echo $ANDROID_HOME</span><br><span class="line">$ adb help</span><br><span class="line">Android Debug Bridge version 1.0.32</span><br><span class="line">Revision 09a0d98bebce-android</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
+          <p>注：我使用的是zsh，bash配置内容相同，配置文件为.bash_profile<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/13/mac配置android环境变量/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
