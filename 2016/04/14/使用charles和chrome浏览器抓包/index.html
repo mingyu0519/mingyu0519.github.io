@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="mac,android," />
+  <meta name="keywords" content="charles,https,http," />
 
 
 
@@ -80,16 +80,22 @@
 
 
 
-<meta name="description" content="注：我使用的是zsh，bash配置内容相同，配置文件为.bash_profile">
+<meta name="description" content="环境配置
+安装charles，官方地址
+https抓包需要配置ssl证书官方ssl说明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mac配置android环境变量">
-<meta property="og:url" content="http://wangmingyu.tk/2016/04/13/mac配置android环境变量/index.html">
+<meta property="og:title" content="使用charles抓包">
+<meta property="og:url" content="http://wangmingyu.tk/2016/04/14/使用charles和chrome浏览器抓包/index.html">
 <meta property="og:site_name" content="Wangmy’s blog">
-<meta property="og:description" content="注：我使用的是zsh，bash配置内容相同，配置文件为.bash_profile">
-<meta property="og:updated_time" content="2016-04-13T08:56:30.000Z">
+<meta property="og:description" content="环境配置
+安装charles，官方地址
+https抓包需要配置ssl证书官方ssl说明">
+<meta property="og:updated_time" content="2016-04-14T08:48:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mac配置android环境变量">
-<meta name="twitter:description" content="注：我使用的是zsh，bash配置内容相同，配置文件为.bash_profile">
+<meta name="twitter:title" content="使用charles抓包">
+<meta name="twitter:description" content="环境配置
+安装charles，官方地址
+https抓包需要配置ssl证书官方ssl说明">
 
 
 
@@ -107,7 +113,7 @@
   };
 </script>
 
-  <title> mac配置android环境变量 | Wangmy’s blog </title>
+  <title> 使用charles抓包 | Wangmy’s blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +283,7 @@
             
             
               
-                mac配置android环境变量
+                使用charles抓包
               
             
           </h1>
@@ -289,8 +295,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-13T16:47:39+08:00" content="2016-04-13">
-              2016-04-13
+            <time itemprop="dateCreated" datetime="2016-04-14T16:34:37+08:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -300,8 +306,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/13/mac配置android环境变量/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/13/mac配置android环境变量/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/使用charles和chrome浏览器抓包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/使用charles和chrome浏览器抓包/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -324,22 +330,29 @@
       
 
       
-        <p>注：我使用的是zsh，bash配置内容相同，配置文件为.bash_profile<br><a id="more"></a></p>
-<h2 id="JAVA-HOME"><a href="#JAVA-HOME" class="headerlink" title="JAVA_HOME"></a>JAVA_HOME</h2><ul>
-<li><p>配置环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 使用vim打开.zshrc文件，加入java环境变量</span><br><span class="line">$ vim .zshrc</span><br><span class="line">export JAVA_HOME=$(/usr/libexec/java_home)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ source .zshrc</span><br><span class="line">$ echo $JAVA_HOME</span><br><span class="line">$ java -version</span><br><span class="line">java version &quot;1.8.0_73&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_73-b02)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.73-b02, mixed mode)</span><br></pre></td></tr></table></figure>
-</li>
+        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li>安装charles，<a href="http://www.charlesproxy.com/" target="_blank" rel="external">官方地址</a></li>
+<li>https抓包需要配置ssl证书<a href="http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/" target="_blank" rel="external">官方ssl说明</a><a id="more"></a>
+<h2 id="http抓包"><a href="#http抓包" class="headerlink" title="http抓包"></a>http抓包</h2></li>
+<li>打开Charles程序</li>
+<li>查看Mac电脑的IP地址，如192.168.1.101</li>
+<li>打开iOS设置，进入当前wifi连接，设置HTTP代理Group，将服务器填为上一步中获得的IP，即192.168.1.101，端口填8888</li>
+<li>iOS设备打开你要抓包的app进行网络操作</li>
+<li>Charles弹出确认框，点击Allow按钮即可</li>
 </ul>
-<h2 id="ANDROID-HOME"><a href="#ANDROID-HOME" class="headerlink" title="ANDROID_HOME"></a>ANDROID_HOME</h2><ul>
-<li><p>配置环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim .zshrc</span><br><span class="line">export ANDROID_HOME=/Applications/ADT/sdk</span><br><span class="line">export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ source .zshrc</span><br><span class="line">$ echo $ANDROID_HOME</span><br><span class="line">$ adb help</span><br><span class="line">Android Debug Bridge version 1.0.32</span><br><span class="line">Revision 09a0d98bebce-android</span><br></pre></td></tr></table></figure>
-</li>
+<h2 id="https抓包"><a href="#https抓包" class="headerlink" title="https抓包"></a>https抓包</h2><ul>
+<li>下载<a href="http://www.charlesproxy.com/ssl.zip" target="_blank" rel="external">Charles证书</a>，解压后导入到iOS设备中（将crt文件作为邮件附件发给自己，再在iOS设备中点击附件即可安装；也可上传至dropbox之类的网盘，通过safari下载安装）</li>
+<li>在Charles的工具栏上点击设置按钮，选择Proxy Settings…</li>
+<li>切换到SSL选项卡，选中Enable SSL Proxying</li>
+<li>需要在SSL选项卡的Locations表单填写要抓包的域名和端口，点击Add按钮，在弹出的表单中Host填写域名，比如填www.baidu.com，Port填443</li>
+</ul>
+<h2 id="浏览器抓包"><a href="#浏览器抓包" class="headerlink" title="浏览器抓包"></a>浏览器抓包</h2><ul>
+<li>打开Charles程序</li>
+<li>查看Mac电脑的IP地址，如192.168.1.101</li>
+<li>打开浏览器chrome，可以使用SwitchySharp扩展设置HTTP代理，将服务器填为上一步中获得的IP，即192.168.1.101，端口填8888</li>
+<li>使用chrome操作需要测试的网页</li>
+<li>Charles弹出确认框，点击Allow按钮即可</li>
+<li>抓取https的网页同样需要在mac电脑端信任charles的ssl证书</li>
 </ul>
 
       
@@ -361,9 +374,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/mac/" rel="tag">#mac</a>
+            <a href="/tags/charles/" rel="tag">#charles</a>
           
-            <a href="/tags/android/" rel="tag">#android</a>
+            <a href="/tags/https/" rel="tag">#https</a>
+          
+            <a href="/tags/http/" rel="tag">#http</a>
           
         </div>
       
@@ -372,17 +387,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/13/mac配置自带vim/" rel="next" title="mac配置自带vim">
-                <i class="fa fa-chevron-left"></i> mac配置自带vim
+              <a href="/2016/04/13/mac配置android环境变量/" rel="next" title="mac配置android环境变量">
+                <i class="fa fa-chevron-left"></i> mac配置android环境变量
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/14/使用charles和chrome浏览器抓包/" rel="prev" title="使用charles抓包">
-                使用charles抓包 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -431,8 +442,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/13/mac配置android环境变量/"
-           data-title="mac配置android环境变量" data-url="http://wangmingyu.tk/2016/04/13/mac配置android环境变量/">
+      <div class="ds-thread" data-thread-key="2016/04/14/使用charles和chrome浏览器抓包/"
+           data-title="使用charles抓包" data-url="http://wangmingyu.tk/2016/04/14/使用charles和chrome浏览器抓包/">
       </div>
     
   </div>
@@ -516,7 +527,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA-HOME"><span class="nav-number">1.</span> <span class="nav-text">JAVA_HOME</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ANDROID-HOME"><span class="nav-number">2.</span> <span class="nav-text">ANDROID_HOME</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http抓包"><span class="nav-number">2.</span> <span class="nav-text">http抓包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#https抓包"><span class="nav-number">3.</span> <span class="nav-text">https抓包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器抓包"><span class="nav-number">4.</span> <span class="nav-text">浏览器抓包</span></a></li></ol></div>
             
           </div>
         </section>
