@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="运维,ansible," />
+  <meta name="keywords" content="appium,java," />
 
 
 
@@ -80,19 +80,16 @@
 
 
 
-<meta name="description" content="##安装ansible环境
-利用Linux或者Unix环境下的软件包管理工具下载并安装Ansible软件包，或者直接从Git资源库中下载源码然后编译安装（这种方式需要手动下载和安装ansible依赖的python环境不推荐使用）。中央服务器和客户端主机都需要安装python2.4或者2.6,需要在各台主机上配置SSH authorized_keys文件（配置ssh无密码登录请自行百度谷歌）。">
+<meta name="description" content="一个简单的android客户端appium测试代码注释。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ansible 环境配置">
-<meta property="og:url" content="http://wangmingyu.tk/2014/08/31/Ansible-post/index.html">
+<meta property="og:title" content="appium自动化java脚本示例解释">
+<meta property="og:url" content="http://wangmingyu.tk/2016/04/18/appium自动化java脚本示例解释/index.html">
 <meta property="og:site_name" content="Wangmy’s blog">
-<meta property="og:description" content="##安装ansible环境
-利用Linux或者Unix环境下的软件包管理工具下载并安装Ansible软件包，或者直接从Git资源库中下载源码然后编译安装（这种方式需要手动下载和安装ansible依赖的python环境不推荐使用）。中央服务器和客户端主机都需要安装python2.4或者2.6,需要在各台主机上配置SSH authorized_keys文件（配置ssh无密码登录请自行百度谷歌）。">
-<meta property="og:updated_time" content="2016-04-13T01:37:58.000Z">
+<meta property="og:description" content="一个简单的android客户端appium测试代码注释。">
+<meta property="og:updated_time" content="2016-04-18T07:25:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ansible 环境配置">
-<meta name="twitter:description" content="##安装ansible环境
-利用Linux或者Unix环境下的软件包管理工具下载并安装Ansible软件包，或者直接从Git资源库中下载源码然后编译安装（这种方式需要手动下载和安装ansible依赖的python环境不推荐使用）。中央服务器和客户端主机都需要安装python2.4或者2.6,需要在各台主机上配置SSH authorized_keys文件（配置ssh无密码登录请自行百度谷歌）。">
+<meta name="twitter:title" content="appium自动化java脚本示例解释">
+<meta name="twitter:description" content="一个简单的android客户端appium测试代码注释。">
 
 
 
@@ -110,7 +107,7 @@
   };
 </script>
 
-  <title> Ansible 环境配置 | Wangmy’s blog </title>
+  <title> appium自动化java脚本示例解释 | Wangmy’s blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -280,7 +277,7 @@
             
             
               
-                Ansible 环境配置
+                appium自动化java脚本示例解释
               
             
           </h1>
@@ -292,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-08-31T17:05:16+08:00" content="2014-08-31">
-              2014-08-31
+            <time itemprop="dateCreated" datetime="2016-04-18T14:20:06+08:00" content="2016-04-18">
+              2016-04-18
             </time>
           </span>
 
@@ -303,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/08/31/Ansible-post/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/08/31/Ansible-post/" itemprop="commentsCount"></span>
+                <a href="/2016/04/18/appium自动化java脚本示例解释/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/18/appium自动化java脚本示例解释/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -327,26 +324,7 @@
       
 
       
-        <p>##安装ansible环境</p>
-<p>利用Linux或者Unix环境下的软件包管理工具下载并安装Ansible软件包，或者直接从Git资源库中下载源码然后编译安装（这种方式需要手动下载和安装ansible依赖的python环境不推荐使用）。<br>中央服务器和客户端主机都需要安装python2.4或者2.6,需要在各台主机上配置SSH authorized_keys文件（配置ssh无密码登录请自行百度谷歌）。<br><a id="more"></a></p>
-<p>##Ansible运行</p>
-<p>###命令<br>按照步骤一配置完成后输入以下命令 ansible -i /usr/local/Cellar/ansible/ansible_works/testAnsible/hosts all -m ping -u root -i后指定的是hosts文件，hosts文件内部定义了客户端主机地址</p>
-<p>###参数</p>
-<ul>
-<li>all指hosts中所有的客户端主机</li>
-<li>-m ping是ansible的一个模块，通常用来检查客户端主机是否可以使用</li>
-<li>-u 代表客户端主机名称，如果和中央服务器名称相同则不需要输入</li>
-</ul>
-<p><strong>客户端输出以下内容表示成功连接客户端：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ts all -m ping -u root</span><br><span class="line">192.168.64.252 | success &gt;&gt;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;changed&quot;: false,</span><br><span class="line">  &quot;ping&quot;: &quot;pong&quot;        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>##Playbook文件<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">- hosts:</span> test</span><br><span class="line"><span class="attr">  remote_user:</span> root</span><br><span class="line"><span class="attr">  tasks:</span></span><br><span class="line"><span class="attr">    - name:</span> whoami</span><br><span class="line"><span class="attr">      shell:</span> <span class="string">'date &gt; date.txt'</span></span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>hosts执行任务的主机</li>
-<li>remote_user主机的用户名</li>
-<li>tasks用来指定需要执行的任务</li>
-<li>name任务名称</li>
-<li>shell是ansible内置的模块，用来执行shell命令</li>
-</ul>
-<p>编辑完playbook.yml文件后，使用命令ansible-playbook playbook.yml执行</p>
+        <p>一个简单的android客户端appium测试代码注释。<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Appium UI Test Android!</span><br><span class="line"> *</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="comment">// 定义一个私有的AppiumDriver对象driver名</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> AppiumDriver&lt;WebElement&gt; driver;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span> <span class="keyword">throws</span> MalformedURLException, InterruptedException</span><br><span class="line">    </span>&#123;</span><br><span class="line">    	File classpathRoot = <span class="keyword">new</span> File(System.getProperty(<span class="string">"user.dir"</span>));</span><br><span class="line">        File appDir = <span class="keyword">new</span> File(classpathRoot, <span class="string">"resources/app/"</span>);</span><br><span class="line">        File app = <span class="keyword">new</span> File(appDir, <span class="string">"test.apk"</span>);</span><br><span class="line">        DesiredCapabilities capabilities = <span class="keyword">new</span> DesiredCapabilities();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//添加capabilities参数，包括设备名，平台版本号，apk或者ipa文件的地址，app包名，启动的activity名</span></span><br><span class="line">        capabilities.setCapability(<span class="string">"deviceName"</span>,<span class="string">"Z2X4C15604004377"</span>);</span><br><span class="line">        capabilities.setCapability(<span class="string">"platformVersion"</span>, <span class="string">"5.0"</span>);</span><br><span class="line">        capabilities.setCapability(<span class="string">"app"</span>, app.getAbsolutePath());</span><br><span class="line">        capabilities.setCapability(<span class="string">"appPackage"</span>, <span class="string">"com.test.app"</span>);</span><br><span class="line">        capabilities.setCapability(<span class="string">"appActivity"</span>, <span class="string">".ui.activity"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成一个本地的AppiumDriver对象并且赋值给driver</span></span><br><span class="line">        driver = <span class="keyword">new</span> AndroidDriver&lt;&gt;(<span class="keyword">new</span> URL(<span class="string">"http://127.0.0.1:4723/wd/hub"</span>), capabilities);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 等待时间</span></span><br><span class="line">        Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">        <span class="comment">// 滑动方法 swipe(int starX, int starY, int endX, int endY, time);</span></span><br><span class="line">        driver.swipe(<span class="number">608</span>, <span class="number">865</span>, <span class="number">34</span>, <span class="number">920</span>, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取classname 是android.view.View 的控件合集</span></span><br><span class="line">        List&lt;WebElement&gt; loginButton = driver.findElementsByClassName(<span class="string">"android.view.View"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 点击登录按钮</span></span><br><span class="line">        loginButton.get(<span class="number">0</span>).click();</span><br><span class="line">        Thread.sleep(<span class="number">19000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//关闭测试session</span></span><br><span class="line">        driver.quit();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -367,9 +345,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/运维/" rel="tag">#运维</a>
+            <a href="/tags/appium/" rel="tag">#appium</a>
           
-            <a href="/tags/ansible/" rel="tag">#ansible</a>
+            <a href="/tags/java/" rel="tag">#java</a>
           
         </div>
       
@@ -378,13 +356,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/18/appium自动化测试获取元素/" rel="next" title="appium自动化测试获取元素">
+                <i class="fa fa-chevron-left"></i> appium自动化测试获取元素
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/09/04/python获取参数/" rel="prev" title="python获取参数">
-                python获取参数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -433,8 +411,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/08/31/Ansible-post/"
-           data-title="Ansible 环境配置" data-url="http://wangmingyu.tk/2014/08/31/Ansible-post/">
+      <div class="ds-thread" data-thread-key="2016/04/18/appium自动化java脚本示例解释/"
+           data-title="appium自动化java脚本示例解释" data-url="http://wangmingyu.tk/2016/04/18/appium自动化java脚本示例解释/">
       </div>
     
   </div>
