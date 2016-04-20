@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="appium,test," />
+  <meta name="keywords" content="appium,java," />
 
 
 
@@ -80,16 +80,16 @@
 
 
 
-<meta name="description" content="npm --registry http://registry.cnpmjs.org install -g appium使用npm的国内镜像可以安装，速度很不错。以后不想输入ip的话可以输入以下命令：npm config set registry http://registry.cnpmjs.org然后就可以直接输入 npm install -g appium 安装了">
+<meta name="description" content="自动化测试过程中需要使用截图进行结果的纪录。截图使用方法如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="appium镜像设置">
-<meta property="og:url" content="http://wangmingyu.tk/2014/09/04/appium镜像设置/index.html">
+<meta property="og:title" content="appium自动化测试截屏">
+<meta property="og:url" content="http://wangmingyu.tk/2016/04/20/appium自动化测试截屏/index.html">
 <meta property="og:site_name" content="Wangmy’s blog">
-<meta property="og:description" content="npm --registry http://registry.cnpmjs.org install -g appium使用npm的国内镜像可以安装，速度很不错。以后不想输入ip的话可以输入以下命令：npm config set registry http://registry.cnpmjs.org然后就可以直接输入 npm install -g appium 安装了">
-<meta property="og:updated_time" content="2016-04-13T01:37:58.000Z">
+<meta property="og:description" content="自动化测试过程中需要使用截图进行结果的纪录。截图使用方法如下：">
+<meta property="og:updated_time" content="2016-04-20T06:54:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="appium镜像设置">
-<meta name="twitter:description" content="npm --registry http://registry.cnpmjs.org install -g appium使用npm的国内镜像可以安装，速度很不错。以后不想输入ip的话可以输入以下命令：npm config set registry http://registry.cnpmjs.org然后就可以直接输入 npm install -g appium 安装了">
+<meta name="twitter:title" content="appium自动化测试截屏">
+<meta name="twitter:description" content="自动化测试过程中需要使用截图进行结果的纪录。截图使用方法如下：">
 
 
 
@@ -107,7 +107,7 @@
   };
 </script>
 
-  <title> appium镜像设置 | Wangmy’s blog </title>
+  <title> appium自动化测试截屏 | Wangmy’s blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                appium镜像设置
+                appium自动化测试截屏
               
             
           </h1>
@@ -289,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-09-04T22:17:51+08:00" content="2014-09-04">
-              2014-09-04
+            <time itemprop="dateCreated" datetime="2016-04-20T14:47:46+08:00" content="2016-04-20">
+              2016-04-20
             </time>
           </span>
 
@@ -300,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/09/04/appium镜像设置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/09/04/appium镜像设置/" itemprop="commentsCount"></span>
+                <a href="/2016/04/20/appium自动化测试截屏/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/20/appium自动化测试截屏/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -324,7 +324,13 @@
       
 
       
-        <p><code>npm --registry http://registry.cnpmjs.org install -g appium</code><br>使用npm的国内镜像可以安装，速度很不错。<br>以后不想输入ip的话可以输入以下命令：<br><code>npm config set registry http://registry.cnpmjs.org</code><br>然后就可以直接输入 npm install -g appium 安装了</p>
+        <p>自动化测试过程中需要使用截图进行结果的纪录。<br>截图使用方法如下：<br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WebDriver driver1 = <span class="keyword">new</span> Augmenter().augment(driver);</span><br><span class="line">File file  = ((TakesScreenshot)driver1).getScreenshotAs(OutputType.FILE);</span><br><span class="line">FileUtils.copyFile(file, <span class="keyword">new</span> File(<span class="string">"Screenshot.jpg"</span>));</span><br></pre></td></tr></table></figure></p>
+<p>getScreenshotAs方法可以接受三个参数：</p>
+<ul>
+<li>OutputType.FILE：获得的截图到一个临时文件。</li>
+<li>OutputType.BASE64：获得base64数据的屏幕截图。</li>
+<li>OutputType.BYTES：获得原始字节的屏幕截图。</li>
+</ul>
 
       
     </div>
@@ -347,7 +353,7 @@
           
             <a href="/tags/appium/" rel="tag">#appium</a>
           
-            <a href="/tags/test/" rel="tag">#test</a>
+            <a href="/tags/java/" rel="tag">#java</a>
           
         </div>
       
@@ -356,17 +362,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/09/04/python获取参数/" rel="next" title="python获取参数">
-                <i class="fa fa-chevron-left"></i> python获取参数
+              <a href="/2016/04/20/appium自动化测试等待时间设置/" rel="next" title="appium自动化测试等待时间设置">
+                <i class="fa fa-chevron-left"></i> appium自动化测试等待时间设置
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/09/16/maven构建非法字符解决办法/" rel="prev" title="maven构建非法字符解决办法">
-                maven构建非法字符解决办法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -415,8 +417,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/09/04/appium镜像设置/"
-           data-title="appium镜像设置" data-url="http://wangmingyu.tk/2014/09/04/appium镜像设置/">
+      <div class="ds-thread" data-thread-key="2016/04/20/appium自动化测试截屏/"
+           data-title="appium自动化测试截屏" data-url="http://wangmingyu.tk/2016/04/20/appium自动化测试截屏/">
       </div>
     
   </div>
