@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jenkins,email," />
+  <meta name="keywords" content="appium,java," />
 
 
 
@@ -80,16 +80,16 @@
 
 
 
-<meta name="description" content="配置jenkins邮箱完成后报错:">
+<meta name="description" content="Appium测试混合应用混合应用即是原生应用中间混着html页面，需要在两种类型的页面之间跳转。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jenkins 邮箱配置及问题解决">
-<meta property="og:url" content="http://wangmingyu.tk/2014/11/05/Jenkins-邮箱配置及问题解决/index.html">
+<meta property="og:title" content="Appium混合应用测试">
+<meta property="og:url" content="http://wangmingyu.tk/2016/06/22/Appium混合应用测试/index.html">
 <meta property="og:site_name" content="Wangmy’s blog">
-<meta property="og:description" content="配置jenkins邮箱完成后报错:">
-<meta property="og:updated_time" content="2016-04-13T01:37:58.000Z">
+<meta property="og:description" content="Appium测试混合应用混合应用即是原生应用中间混着html页面，需要在两种类型的页面之间跳转。">
+<meta property="og:updated_time" content="2016-06-22T05:54:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jenkins 邮箱配置及问题解决">
-<meta name="twitter:description" content="配置jenkins邮箱完成后报错:">
+<meta name="twitter:title" content="Appium混合应用测试">
+<meta name="twitter:description" content="Appium测试混合应用混合应用即是原生应用中间混着html页面，需要在两种类型的页面之间跳转。">
 
 
 
@@ -107,7 +107,7 @@
   };
 </script>
 
-  <title> Jenkins 邮箱配置及问题解决 | Wangmy’s blog </title>
+  <title> Appium混合应用测试 | Wangmy’s blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                Jenkins 邮箱配置及问题解决
+                Appium混合应用测试
               
             
           </h1>
@@ -289,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-11-05T17:20:27+08:00" content="2014-11-05">
-              2014-11-05
+            <time itemprop="dateCreated" datetime="2016-06-22T11:08:31+08:00" content="2016-06-22">
+              2016-06-22
             </time>
           </span>
 
@@ -300,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/11/05/Jenkins-邮箱配置及问题解决/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/11/05/Jenkins-邮箱配置及问题解决/" itemprop="commentsCount"></span>
+                <a href="/2016/06/22/Appium混合应用测试/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/22/Appium混合应用测试/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -324,17 +324,19 @@
       
 
       
-        <p>配置jenkins邮箱完成后报错:<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">Failed to send out e-mail</span><br><span class="line"></span><br><span class="line">javax.mail.MessagingException: Could not connect to SMTP host: smtp.rytong.com, port: 465;</span><br><span class="line">  nested exception is:</span><br><span class="line">	javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target</span><br><span class="line">	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:1934)</span><br><span class="line">	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:638)</span><br><span class="line">	at javax.mail.Service.connect(Service.java:317)</span><br><span class="line">	at javax.mail.Service.connect(Service.java:176)</span><br><span class="line">	at javax.mail.Service.connect(Service.java:125)</span><br><span class="line">	at javax.mail.Transport.send0(Transport.java:194)</span><br><span class="line">	at javax.mail.Transport.send(Transport.java:124)</span><br><span class="line">	at hudson.tasks.Mailer$DescriptorImpl.doSendTestMail(Mailer.java:514)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:606)</span><br><span class="line">	at org.kohsuke.stapler.Function$InstanceFunction.invoke(Function.java:298)</span><br><span class="line">	at org.kohsuke.stapler.Function.bindAndInvoke(Function.java:161)</span><br><span class="line">	at org.kohsuke.stapler.Function.bindAndInvokeAndServeResponse(Function.java:96)</span><br><span class="line">	at org.kohsuke.stapler.MetaClass$1.doDispatch(MetaClass.java:120)</span><br><span class="line">	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:53)</span><br><span class="line">	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:728)</span><br><span class="line">	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:858)</span><br><span class="line">	at org.kohsuke.stapler.MetaClass$6.doDispatch(MetaClass.java:248)</span><br><span class="line">	at org.kohsuke.stapler.NameBasedDispatcher.dispatch(NameBasedDispatcher.java:53)</span><br><span class="line">	at org.kohsuke.stapler.Stapler.tryInvoke(Stapler.java:728)</span><br><span class="line">	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:858)</span><br><span class="line">	at org.kohsuke.stapler.Stapler.invoke(Stapler.java:631)</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>邮件客户端和网页端都是可以收发邮件，排除服务端出错的可能。  </li>
+        <h2 id="Appium测试混合应用"><a href="#Appium测试混合应用" class="headerlink" title="Appium测试混合应用"></a>Appium测试混合应用</h2><p>混合应用即是原生应用中间混着html页面，需要在两种类型的页面之间跳转。<br><a id="more"></a></p>
+<h2 id="测试Android混合应用"><a href="#测试Android混合应用" class="headerlink" title="测试Android混合应用"></a>测试Android混合应用</h2><h3 id="前期设置"><a href="#前期设置" class="headerlink" title="前期设置"></a>前期设置</h3><ol>
+<li>4.4以下版本使用automationName：Selendroid</li>
+<li>4.4及其以上的版本使用automationName：Appium</li>
+<li>需要设置webview的debug模式为true，默认是false</li>
 </ol>
-<ul>
-<li>获取证书可以访问网页端或者直接从邮件客户端中取。</li>
-<li>jenkins需要用到java的信任证书，添加证书命令如下：<br><code>$JAVA_HOME/bin/keytool -import -alias mail.****.com -file mail.****.com.cer -keystore $JAVA_HOME/jre/lib/security/cacerts</code>  </li>
-<li>jenkins是使用的是java，可以使用如下命令验证是否可以连接：<code>java SSLPoke smtp.*****.com 465</code></li>
-<li>提示<code>Successfully connected</code>即可</li>
-<li>重启jenkins服务，发现可以发邮件了。</li>
-</ul>
+<h3 id="元素定位"><a href="#元素定位" class="headerlink" title="元素定位"></a>元素定位</h3><p>Selendroid模式：selendroid inspector<br>Appium模式：chrome://inspect</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>设置webview的debug模式,需要插入在android源码当中：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Build.VERSION.SDK_INT &gt;=Build.VERSION_CODES.KITKAT) &#123;  </span><br><span class="line">    WebView.setWebContentsDebuggingEnabled(<span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Selendroid代码示例,appium模式替换automationName：Appium即可：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置 webdriver 并启动 webview 应用。</span></span><br><span class="line">DesiredCapabilities desiredCapabilities = <span class="keyword">new</span> DesiredCapabilities();</span><br><span class="line">desiredCapabilities.setCapability(<span class="string">"device"</span>, <span class="string">"Selendroid"</span>);</span><br><span class="line">desiredCapabilities.setCapability(<span class="string">"app"</span>, <span class="string">"/path/to/some.apk"</span>);  </span><br><span class="line">URL url = <span class="keyword">new</span> URL(<span class="string">"http://127.0.0.1:4723/wd/hub"</span>);</span><br><span class="line">RemoteWebDriver remoteWebDriver = <span class="keyword">new</span> RemoteWebDriver(url, desiredCapabilities);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 切换到最新的web视图</span></span><br><span class="line">remoteWebDriver.switchTo().window(<span class="string">"WEBVIEW"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//在 guinea-pig 页面用 id 和 元素交互。</span></span><br><span class="line">WebElement div = remoteWebDriver.findElement(By.id(<span class="string">"i_am_an_id"</span>));</span><br><span class="line">Assert.assertEquals(<span class="string">"I am a div"</span>, div.getText()); <span class="comment">//验证得到的文本是否正确。</span></span><br><span class="line">remoteWebDriver.findElement(By.id(<span class="string">"comments"</span>)).sendKeys(<span class="string">"My comment"</span>); <span class="comment">//填写评论。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//离开 webview，回到原生应用。</span></span><br><span class="line">remoteWebDriver.switchTo().window(<span class="string">"NATIVE_APP"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭应用。</span></span><br><span class="line">remoteWebDriver.quit();</span><br></pre></td></tr></table></figure></p>
+<h2 id="测试iOS混合应用"><a href="#测试iOS混合应用" class="headerlink" title="测试iOS混合应用"></a>测试iOS混合应用</h2><h3 id="前期设置-1"><a href="#前期设置-1" class="headerlink" title="前期设置"></a>前期设置</h3><p>和本地应用相同</p>
+<h3 id="元素定位-1"><a href="#元素定位-1" class="headerlink" title="元素定位"></a>元素定位</h3><p>使用appium inspect</p>
+<h3 id="代码示例-1"><a href="#代码示例-1" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置 webdriver 并启动 webview 应用。</span></span><br><span class="line">DesiredCapabilities desiredCapabilities = <span class="keyword">new</span> DesiredCapabilities();</span><br><span class="line">desiredCapabilities.setCapability(<span class="string">"device"</span>, <span class="string">"iPhone Simulator"</span>);</span><br><span class="line">desiredCapabilities.setCapability(<span class="string">"app"</span>, <span class="string">"http://appium.s3.amazonaws.com/WebViewApp6.0.app.zip"</span>);  </span><br><span class="line">URL url = <span class="keyword">new</span> URL(<span class="string">"http://127.0.0.1:4723/wd/hub"</span>);</span><br><span class="line">RemoteWebDriver remoteWebDriver = <span class="keyword">new</span> RemoteWebDriver(url, desiredCapabilities);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 切换到最新的web视图</span></span><br><span class="line"><span class="keyword">for</span>(String winHandle : remoteWebDriver.getWindowHandles())&#123;</span><br><span class="line">  remoteWebDriver.switchTo().window(winHandle);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在 guinea-pig 页面用 id 和 元素交互。</span></span><br><span class="line">WebElement div = remoteWebDriver.findElement(By.id(<span class="string">"i_am_an_id"</span>));</span><br><span class="line">Assert.assertEquals(<span class="string">"I am a div"</span>, div.getText()); <span class="comment">//验证得到的文本是否正确。</span></span><br><span class="line">remoteWebDriver.findElement(By.id(<span class="string">"comments"</span>)).sendKeys(<span class="string">"My comment"</span>); <span class="comment">//填写评论。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//离开 webview，回到原生应用。</span></span><br><span class="line">remoteWebDriver.executeScript(<span class="string">"mobile: leaveWebView"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭应用。</span></span><br><span class="line">remoteWebDriver.quit();</span><br></pre></td></tr></table></figure>
+<p><a href="http://appium.io/slate/cn/master/?java#wd-js-code-example" target="_blank" rel="external">参考官方文档</a></p>
 
       
     </div>
@@ -355,9 +357,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/jenkins/" rel="tag">#jenkins</a>
+            <a href="/tags/appium/" rel="tag">#appium</a>
           
-            <a href="/tags/email/" rel="tag">#email</a>
+            <a href="/tags/java/" rel="tag">#java</a>
           
         </div>
       
@@ -366,17 +368,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/10/31/mac配置php/" rel="next" title="mac配置php">
-                <i class="fa fa-chevron-left"></i> mac配置php
+              <a href="/2016/05/23/Testng用例失败重新运行/" rel="next" title="Testng用例失败重新运行">
+                <i class="fa fa-chevron-left"></i> Testng用例失败重新运行
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/12/20/nodejs顺序执行shell/" rel="prev" title="nodejs顺序执行shell">
-                nodejs顺序执行shell <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -425,8 +423,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/11/05/Jenkins-邮箱配置及问题解决/"
-           data-title="Jenkins 邮箱配置及问题解决" data-url="http://wangmingyu.tk/2014/11/05/Jenkins-邮箱配置及问题解决/">
+      <div class="ds-thread" data-thread-key="2016/06/22/Appium混合应用测试/"
+           data-title="Appium混合应用测试" data-url="http://wangmingyu.tk/2016/06/22/Appium混合应用测试/">
       </div>
     
   </div>
@@ -510,7 +508,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Appium测试混合应用"><span class="nav-number">1.</span> <span class="nav-text">Appium测试混合应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试Android混合应用"><span class="nav-number">2.</span> <span class="nav-text">测试Android混合应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期设置"><span class="nav-number">2.1.</span> <span class="nav-text">前期设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素定位"><span class="nav-number">2.2.</span> <span class="nav-text">元素定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码示例"><span class="nav-number">2.3.</span> <span class="nav-text">代码示例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试iOS混合应用"><span class="nav-number">3.</span> <span class="nav-text">测试iOS混合应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#前期设置-1"><span class="nav-number">3.1.</span> <span class="nav-text">前期设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元素定位-1"><span class="nav-number">3.2.</span> <span class="nav-text">元素定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码示例-1"><span class="nav-number">3.3.</span> <span class="nav-text">代码示例</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
