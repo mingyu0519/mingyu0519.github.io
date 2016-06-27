@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,args," />
+  <meta name="keywords" content="docker,gitbook,nginx," />
 
 
 
@@ -80,16 +80,16 @@
 
 
 
-<meta name="description" content="argparse是python的一个命令行参数模块，可以解析命令行参数，生成帮助.">
+<meta name="description" content="GitbookGitbook简介GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，GitBook 并非关于 Git 的教程。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python获取参数">
-<meta property="og:url" content="http://wangmingyu.tk/2014/09/04/python获取参数/index.html">
+<meta property="og:title" content="docker搭建gitbook服务">
+<meta property="og:url" content="http://wangmingyu.tk/2016/06/27/docker搭建gitbook服务/index.html">
 <meta property="og:site_name" content="Wangmy’s blog">
-<meta property="og:description" content="argparse是python的一个命令行参数模块，可以解析命令行参数，生成帮助.">
-<meta property="og:updated_time" content="2016-04-13T01:37:58.000Z">
+<meta property="og:description" content="GitbookGitbook简介GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，GitBook 并非关于 Git 的教程。">
+<meta property="og:updated_time" content="2016-06-27T03:50:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python获取参数">
-<meta name="twitter:description" content="argparse是python的一个命令行参数模块，可以解析命令行参数，生成帮助.">
+<meta name="twitter:title" content="docker搭建gitbook服务">
+<meta name="twitter:description" content="GitbookGitbook简介GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，GitBook 并非关于 Git 的教程。">
 
 
 
@@ -107,7 +107,7 @@
   };
 </script>
 
-  <title> python获取参数 | Wangmy’s blog </title>
+  <title> docker搭建gitbook服务 | Wangmy’s blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -277,7 +277,7 @@
             
             
               
-                python获取参数
+                docker搭建gitbook服务
               
             
           </h1>
@@ -289,8 +289,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-09-04T21:52:19+08:00" content="2014-09-04">
-              2014-09-04
+            <time itemprop="dateCreated" datetime="2016-06-27T10:49:21+08:00" content="2016-06-27">
+              2016-06-27
             </time>
           </span>
 
@@ -300,8 +300,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2014/09/04/python获取参数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2014/09/04/python获取参数/" itemprop="commentsCount"></span>
+                <a href="/2016/06/27/docker搭建gitbook服务/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/27/docker搭建gitbook服务/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -324,8 +324,25 @@
       
 
       
-        <p>argparse是python的一个命令行参数模块，可以解析命令行参数，生成帮助.<br><a id="more"></a><br>示例：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> argparse <span class="keyword">import</span> ArgumentParser</span><br><span class="line"></span><br><span class="line">argv = ArgumentParser(usage=<span class="string">'it is usage tip'</span>, description=<span class="string">'this is a test'</span>)</span><br><span class="line">argv.add_argument(<span class="string">'--string'</span>, default=<span class="string">'strings'</span>, type=int, help=<span class="string">'the first string argument'</span>)</span><br><span class="line">argv.add_argument(<span class="string">'--int'</span>, default=<span class="number">1</span>, type=str, help=<span class="string">'the second argument'</span>)</span><br><span class="line"></span><br><span class="line">args = argv.parse_args()</span><br><span class="line"></span><br><span class="line"><span class="comment">#打印所有参数</span></span><br><span class="line"><span class="keyword">print</span> args</span><br><span class="line"></span><br><span class="line"><span class="comment">#打印某一个参数</span></span><br><span class="line"><span class="keyword">print</span> args.string</span><br><span class="line"><span class="keyword">print</span> args.int</span><br></pre></td></tr></table></figure></p>
-<p>参数<code>-h --help</code>来显示帮助信息。</p>
+        <h1 id="Gitbook"><a href="#Gitbook" class="headerlink" title="Gitbook"></a>Gitbook</h1><h2 id="Gitbook简介"><a href="#Gitbook简介" class="headerlink" title="Gitbook简介"></a>Gitbook简介</h2><p>GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书，GitBook 并非关于 Git 的教程。</p>
+<a id="more"></a>
+<p>GitBook支持输出多种文档格式：</p>
+<ul>
+<li>静态站点：GitBook默认输出该种格式，生成的静态站点可直接托管搭载Github Pages服务上；</li>
+<li>PDF：需要安装gitbook-pdf依赖；</li>
+<li>eBook：需要安装ebook-convert；</li>
+<li>单HTML网页：支持将内容输出为单页的HTML，不过一般用在将电子书格式转换为PDF或eBook的中间过程；</li>
+<li>JSON：一般用于电子书的调试或元数据提取。</li>
+</ul>
+<h2 id="GitBook基础文件"><a href="#GitBook基础文件" class="headerlink" title="GitBook基础文件"></a>GitBook基础文件</h2><p>使用GitBook制作电子书，必备两个文件：README.md和SUMMARY.md。</p>
+<h2 id="Docker安装Gitbook"><a href="#Docker安装Gitbook" class="headerlink" title="Docker安装Gitbook"></a>Docker安装Gitbook</h2><p>查找gitbook镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker@default:~$ docker search -s 3 gitbook</span><br><span class="line">NAME                         DESCRIPTION                               STARS     OFFICIAL   AUTOMATED</span><br><span class="line">fellah/gitbook               GitBook                                   9                    [OK]</span><br><span class="line">tobegit3hub/gitbook-server                                             7                    [OK]</span><br><span class="line">fellah/gitbook-ebook                                                   3                    [OK]</span><br><span class="line">billryan/gitbook             Docker for GitBook with Unicode support   3                    [OK]</span><br></pre></td></tr></table></figure></p>
+<p>安装gitbook镜像,官方镜像下载太慢的话可以使用国内的daocloud<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker@default:~$ docker pull fellah/gitbook</span><br></pre></td></tr></table></figure></p>
+<p>获取gitbook静态html文件，/yourpath下需要有README.md和SUMMARY.md文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v /yourpath:/srv/gitbook -v /yourpath/html:/srv/html fellah/gitbook gitbook build . /srv/html</span><br></pre></td></tr></table></figure></p>
+<h2 id="展示Gitbook文件"><a href="#展示Gitbook文件" class="headerlink" title="展示Gitbook文件"></a>展示Gitbook文件</h2><p>因为生成的是html静态页面所以需要一个web服务来显示，当前选择用nginx。<br>搜索nginx镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">docker@default:~$ docker search -s 3 nginx</span><br><span class="line">NAME                                     DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">nginx                                    Official build of Nginx.                        3350      [OK]</span><br><span class="line">jwilder/nginx-proxy                      Automated Nginx reverse proxy for docker c...   691                  [OK]</span><br><span class="line">richarvey/nginx-php-fpm                  Container running Nginx + PHP-FPM capable ...   215                  [OK]</span><br><span class="line">jrcs/letsencrypt-nginx-proxy-companion   LetsEncrypt container to use with nginx as...   71                   [OK]</span><br><span class="line">million12/nginx-php                      Nginx + PHP-FPM 5.5, 5.6, 7.0 (NG), CentOS...   67                   [OK]</span><br><span class="line">maxexcloo/nginx-php                      Docker framework container with Nginx and ...   57                   [OK]</span><br><span class="line">webdevops/php-nginx                      Nginx with PHP-FPM                              42                   [OK]</span><br><span class="line">h3nrik/nginx-ldap                        NGINX web server with LDAP/AD, SSL and pro...   27                   [OK]</span><br><span class="line">bitnami/nginx                            Bitnami nginx Docker Image                      18                   [OK]</span><br><span class="line">maxexcloo/nginx                          Docker framework container with Nginx inst...   7                    [OK]</span><br><span class="line">webdevops/nginx                          Nginx container                                 5                    [OK]</span><br><span class="line">million12/nginx                          Nginx: extensible, nicely tuned for better...   5                    [OK]</span><br><span class="line">evild/alpine-nginx                       Minimalistic Docker image with Nginx            4                    [OK]</span><br><span class="line">webdevops/hhvm-nginx                     Nginx with HHVM                                 3                    [OK]</span><br><span class="line">ixbox/nginx                              Nginx on Alpine Linux.                          3                    [OK]</span><br></pre></td></tr></table></figure></p>
+<p>安装nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure></p>
+<p>启动nginx服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name my-nginx -v /yourpath/html:/usr/share/nginx/html -d -p 8080:80 nginx</span><br></pre></td></tr></table></figure></p>
+<p>系统是linux的话在这就已经完成了，Mac和windows还需要配置端口转发，配置本地和docker的虚拟机之间的端口映射。</p>
+<p><a href="https://hub.docker.com/r/fellah/gitbook/" target="_blank" rel="external">gitbook镜像地址</a>，<a href="https://hub.docker.com/_/nginx/" target="_blank" rel="external">nginx的镜像地址</a></p>
 
       
     </div>
@@ -346,9 +363,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/docker/" rel="tag">#docker</a>
           
-            <a href="/tags/args/" rel="tag">#args</a>
+            <a href="/tags/gitbook/" rel="tag">#gitbook</a>
+          
+            <a href="/tags/nginx/" rel="tag">#nginx</a>
           
         </div>
       
@@ -357,17 +376,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2014/08/31/Ansible-post/" rel="next" title="Ansible 环境配置">
-                <i class="fa fa-chevron-left"></i> Ansible 环境配置
+              <a href="/2016/06/27/docker入门环境配置/" rel="next" title="docker入门环境配置">
+                <i class="fa fa-chevron-left"></i> docker入门环境配置
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/09/04/appium镜像设置/" rel="prev" title="appium镜像设置">
-                appium镜像设置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,8 +431,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2014/09/04/python获取参数/"
-           data-title="python获取参数" data-url="http://wangmingyu.tk/2014/09/04/python获取参数/">
+      <div class="ds-thread" data-thread-key="2016/06/27/docker搭建gitbook服务/"
+           data-title="docker搭建gitbook服务" data-url="http://wangmingyu.tk/2016/06/27/docker搭建gitbook服务/">
       </div>
     
   </div>
@@ -501,7 +516,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Gitbook"><span class="nav-number">1.</span> <span class="nav-text">Gitbook</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gitbook简介"><span class="nav-number">1.1.</span> <span class="nav-text">Gitbook简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitBook基础文件"><span class="nav-number">1.2.</span> <span class="nav-text">GitBook基础文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker安装Gitbook"><span class="nav-number">1.3.</span> <span class="nav-text">Docker安装Gitbook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#展示Gitbook文件"><span class="nav-number">1.4.</span> <span class="nav-text">展示Gitbook文件</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
