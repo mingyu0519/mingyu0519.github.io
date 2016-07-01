@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="testng,maven,reportng," />
+  <meta name="keywords" content="testng,reportng,maven," />
 
 
 
@@ -89,7 +89,7 @@
 <meta property="og:image" content="http://7xvvfe.com1.z0.glb.clouddn.com/log1.png">
 <meta property="og:image" content="http://7xvvfe.com1.z0.glb.clouddn.com/log2.png">
 <meta property="og:image" content="http://7xvvfe.com1.z0.glb.clouddn.com/%E9%A5%BC%E5%9B%BE%E6%98%BE%E7%A4%BA.png">
-<meta property="og:updated_time" content="2016-07-01T08:36:21.000Z">
+<meta property="og:updated_time" content="2016-07-01T09:55:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="reportng定制修改">
 <meta name="twitter:description" content="定制目的最近接口测试和UI自动化测试都有用到reportng来做测试报告的展示，发现了几个不是很方便的地方：">
@@ -349,6 +349,7 @@
 <blockquote>
 <p>修改完后的<a href="https://github.com/mingyu0519/reportng" target="_blank" rel="external">代码地址</a></p>
 </blockquote>
+<h2 id="使用修改后的reportng"><a href="#使用修改后的reportng" class="headerlink" title="使用修改后的reportng"></a>使用修改后的reportng</h2><p>jar包<a href="http://o9mrk1bm4.bkt.clouddn.com/reportng-1.1.5.jar" target="_blank" rel="external">下载</a><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 依赖reportNg 关联testNg --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.uncommons<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>reportng<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.testng<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>testng<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;project.basedir&#125;/lib/reportng-1.1.5.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>velocity<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>velocity<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -371,9 +372,9 @@
           
             <a href="/tags/testng/" rel="tag">#testng</a>
           
-            <a href="/tags/maven/" rel="tag">#maven</a>
-          
             <a href="/tags/reportng/" rel="tag">#reportng</a>
+          
+            <a href="/tags/maven/" rel="tag">#maven</a>
           
         </div>
       
@@ -522,7 +523,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定制目的"><span class="nav-number">1.</span> <span class="nav-text">定制目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加日志"><span class="nav-number">2.</span> <span class="nav-text">添加日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化修改"><span class="nav-number">3.</span> <span class="nav-text">本地化修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改测试结果顺序"><span class="nav-number">4.</span> <span class="nav-text">修改测试结果顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主页添加饼图显示"><span class="nav-number">5.</span> <span class="nav-text">主页添加饼图显示</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定制目的"><span class="nav-number">1.</span> <span class="nav-text">定制目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加日志"><span class="nav-number">2.</span> <span class="nav-text">添加日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地化修改"><span class="nav-number">3.</span> <span class="nav-text">本地化修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改测试结果顺序"><span class="nav-number">4.</span> <span class="nav-text">修改测试结果顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主页添加饼图显示"><span class="nav-number">5.</span> <span class="nav-text">主页添加饼图显示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用修改后的reportng"><span class="nav-number">6.</span> <span class="nav-text">使用修改后的reportng</span></a></li></ol></div>
             
           </div>
         </section>
