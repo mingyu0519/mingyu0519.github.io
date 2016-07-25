@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://wangmingyu.tk/2016/07/25/修改github已提交的用户名和邮箱/index.html">
 <meta property="og:site_name" content="Wangmy’s blog">
 <meta property="og:description" content="改变作者信息 为改变已经存在的 commit 的用户名和/或邮箱地址，你必须重写你 Git repo 的整个历史。">
-<meta property="og:updated_time" content="2016-07-25T06:55:56.000Z">
+<meta property="og:updated_time" content="2016-07-25T06:58:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="修改github已提交的用户名和邮箱">
 <meta name="twitter:description" content="改变作者信息 为改变已经存在的 commit 的用户名和/或邮箱地址，你必须重写你 Git repo 的整个历史。">
@@ -332,14 +332,19 @@
 </blockquote>
 <p>欲修改的旧的邮箱地址 正确的用户名和邮箱地址</p>
 <p>1.打开终端（Mac 或 Linux 用户）或命令行（Windows 用户）。</p>
-<p>2.创建一个你的 repo 的全新裸 clone （repo.git 替换为你的项目，下同） git clone –bare <a href="https://github.com/user/repo.git" target="_blank" rel="external">https://github.com/user/repo.git</a> cd repo.git</p>
-<p>3.复制粘贴脚本，并根据你的信息修改以下变量： OLD_EMAIL CORRECT_NAME CORRECT_EMAIL</p>
+<p>2.创建一个你的 repo 的全新裸 clone （repo.git 替换为你的项目，下同） <code>git clone --bare &lt;https://github.com/user/repo.git&gt; cd repo.git</code></p>
+<p>3.复制粘贴脚本，并根据你的信息修改以下变量：</p>
+<ul>
+<li>OLD_EMAIL</li>
+<li>CORRECT_NAME</li>
+<li>CORRECT_EMAIL</li>
+</ul>
 <p>脚本：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span><br><span class="line"></span></span><br><span class="line">git filter-branch --env-filter <span class="string">'</span><br><span class="line"></span><br><span class="line">OLD_EMAIL="your-old-email@example.com"</span><br><span class="line">CORRECT_NAME="Your Correct Name"</span><br><span class="line">CORRECT_EMAIL="your-correct-email@example.com"</span><br><span class="line"></span><br><span class="line">if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]</span><br><span class="line">then</span><br><span class="line">    export GIT_COMMITTER_NAME="$CORRECT_NAME"</span><br><span class="line">    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"</span><br><span class="line">fi</span><br><span class="line">if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]</span><br><span class="line">then</span><br><span class="line">    export GIT_AUTHOR_NAME="$CORRECT_NAME"</span><br><span class="line">    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"</span><br><span class="line">fi</span><br><span class="line">'</span> --tag-name-filter cat -- --branches --tags</span><br></pre></td></tr></table></figure>
 <p>4.按 Enter 执行脚本。</p>
 <p>5.查看新 Git 历史有没有错误。</p>
-<p>6.把正确历史 push 到 Github：（push 有困难时记得修改 DNS 或者搭梯子） git push –force –tags origin ‘refs/heads/*’</p>
-<p>7.清除临时 clone。 cd .. rm -rf repo.git</p>
+<p>6.把正确历史 push 到 Github：（push 有困难时记得修改 DNS 或者搭梯子） <code>git push --force --tags origin &#39;refs/heads/*&#39;</code></p>
+<p>7.清除临时 clone。 <code>cd .. rm -rf repo.git</code></p>
 <p><a href="http://dangzhiqiang.blog.51cto.com/7961271/1657864" target="_blank" rel="external">原博客地址</a></p>
 
       
